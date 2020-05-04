@@ -46,11 +46,7 @@ public class AppoinmentSchedule {
 				int d_id = rs.getInt("D_id");
 				int h_id = rs.getInt("H_id");
 				int app_id = rs.getInt("App_id");
-				
-				
-				//String d_id = rs.getString("D_id");
-				//String h_id = rs.getString("H_id");
-				//String app_id = rs.getString("App_id");
+			
 
 				// Add into the html table
 				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" +schedule_id+ "'>" +date+ "</td>";
@@ -109,7 +105,7 @@ public class AppoinmentSchedule {
 					+ "<th>Hostpital Id</th>"
 					+ "<th>Appointment Id</th></tr>";
 
-			 //	String query = "select s.Schedule_id,a.Appointment_Name,s.Date,s.Start_Time,s.End_Time,s.D_id,s.H_id,s.App_id from appointment_scheduling s inner join appointment_type a on s.App_id=a.appointment_Id  ";
+			
 			
 						String query = "select s.Schedule_id,a.Appointment_Type,d.DoctorName,h.Hospital_Name,s.Date,s.Start_Time,s.End_Time,s.D_id,s.H_id,s.App_id "
 								+ "from appointment_scheduling s ,appointment_type a , doctor d, hostpital h "
@@ -136,7 +132,7 @@ public class AppoinmentSchedule {
 							appScheduling.setH_id(rs.getInt("H_id"));
 							appScheduling.setApp_id(rs.getInt("App_id"));
 							
-							//TypeRead.getAppointment_Name().replace('+',' ')
+							
 
 							// Add into the html table
 			            	output += "<tr><td>" + appScheduling.getSchedule_id() + "</td>";
@@ -194,9 +190,6 @@ public class AppoinmentSchedule {
 				preparedStmt.setInt(5,Integer.parseInt(h_id));
 				preparedStmt.setInt(6,Integer.parseInt(app_id));
 							
-				//preparedStmt.setString(4,d_id);
-				//preparedStmt.setString(5,h_id);
-				//preparedStmt.setString(6,app_id);
 	
 				preparedStmt.execute();
 				con.close();
@@ -266,7 +259,6 @@ public class AppoinmentSchedule {
 		
 		
 		
-		
 		public String deleteSchedule(String Schedule_id)
 		{
 			String output = "";
@@ -303,90 +295,6 @@ public class AppoinmentSchedule {
 			return output;
 		 
 		}
-		
-
-
-		
-		
-		
-		
-		/*
-		
-		// ==============================get schedule by id ===========================
-
-		// view list of Schedule
-		public List<ScheduleBean> viewschedule() {
-
-			return viewschedule(0);
-
-		}
-
-		// show the type by ID
-		public ScheduleBean Show_schedule_By_Id(int id) {
-			List<ScheduleBean> list = viewschedule(id);
-			if (!list.isEmpty()) {
-				return list.get(0);
-			}
-			return null;
-		}
-
-		// view method
-		public List<ScheduleBean> viewschedule(int id) {
-			List<ScheduleBean> TypeList = new ArrayList<>();
-
-			try {
-				Connection con = dbObj.connect();
-				if (con == null) {
-
-					System.out.println("Error While reading from database");
-					return TypeList;
-				}
-
-				String query;
-
-				if (id == 0) {
-					query = "select * from appointment_scheduling";
-				} else {
-					query = "select * from appointment_scheduling where Schedule_id=" + id;
-				}
-				Statement stmt = con.createStatement();
-				ResultSet results = stmt.executeQuery(query);
-
-				while (results.next()) {
-					ScheduleBean type = new ScheduleBean(results.getInt("Schedule_id"), results.getString("Date"),
-							results.getTime("Start_Time"), results.getTime("End_Time"), results.getInt("D_id"),
-							results.getInt("H_id"), results.getInt("App_id")
-
-					);
-					TypeList.add(type);
-				}
-				con.close();
-			} catch (Exception e) {
-				System.out.println("Error While Reading");
-				System.err.println(e.getMessage());
-			}
-
-			return TypeList;
-		}
-
-		
-		public List<ScheduleBean> View_Shedules_By_given_Day(String day) {
-
-			List<ScheduleBean> ScheduleBeanlist = new ArrayList<>();
-
-			for (ScheduleBean Schedule : viewschedule()) {
-
-				if (day.equals(Schedule.getDate())) {
-
-					ScheduleBeanlist.add(Schedule);
-				}
-			}
-
-			return ScheduleBeanlist;
-		}
-
-
-
-*/
+	
 	}
 		
