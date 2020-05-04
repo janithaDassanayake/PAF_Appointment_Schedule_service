@@ -50,7 +50,7 @@ public class TypeAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		
-		String output = appoinmentType.insertItem(request.getParameter("Appointment_Type"),
+		String output = appoinmentType.addAppointmentType(request.getParameter("Appointment_Type"),
 				request.getParameter("Appointment_Name"),
 				request.getParameter("Appointment_Desc"));
 		
@@ -64,7 +64,7 @@ public class TypeAPI extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		 String output = appoinmentType.updateItem(paras.get("hidItemIDSave").toString(),
+		 String output = appoinmentType.updateAppointmentType(paras.get("hidItemIDSave").toString(),
 		 paras.get("Appointment_Type").toString().replace('+',' '),
 		 paras.get("Appointment_Name").toString().replace('+',' ') ,
 		 paras.get("Appointment_Desc").toString().replace('+',' ') );
@@ -88,7 +88,7 @@ public class TypeAPI extends HttpServlet {
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		String output = appoinmentType.deleteItem(paras.get("appointment_Id ").toString());
+		String output = appoinmentType.deleteAppointmentTypes(paras.get("appointment_Id ").toString());
 		response.getWriter().write(output);
 		System.out.println(output);
 	}

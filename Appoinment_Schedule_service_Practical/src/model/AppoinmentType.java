@@ -76,52 +76,10 @@ public class AppoinmentType {
 	
 	
 
-	
-	
-	//========================== Add In To Appointment Types =========================
-	
-	/*	
-	public String addAppointmentType(AppoinmentTypeBean TypeBean) {
-
-			String output = "";
-			try {
-
-				Connection con = dbObj.connect();
-				if (con == null) {
-					return "Error while connecting to the database";
-				}
-
-				// create a prepared statement
-				String query = " INSERT INTO appointment_type (Appointment_Type, Appointment_Name, Appointment_Desc) VALUES (?, ?, ?)";
-				
-				PreparedStatement preparedStmt = con.prepareStatement(query);
-
-				// binding values
-				preparedStmt.setString(1, TypeBean.getAppointment_Type());
-				preparedStmt.setString(2, TypeBean.getAppointment_Name());
-				preparedStmt.setString(3, TypeBean.getAppointment_Desc());
-
-				// execute the statement
-				preparedStmt.execute();
-				con.close();
-				
-				String newItems = viewAppointmentTypes();
-				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
-
-			} catch (Exception e) {
-				output = "{\"status\":\"error\", \"data\": \"Error while inserting the appointmnet Type.\"}";
-				System.err.println(e.getMessage());
-			}
-
-			return output;
-		}
-	*/
-	
-	
-	
+//==========================Add appointment type===================================
 
 
-	public String insertItem(String type, String name, String desc)
+	public String addAppointmentType(String type, String name, String desc)
 	{
 		String output = "";
 			 
@@ -169,7 +127,7 @@ public class AppoinmentType {
 		
 	
 
-	public String updateItem(String ID, String type, String name, String desc)
+	public String updateAppointmentType(String ID, String type, String name, String desc)
 	{
 			 
 		String output = "";
@@ -218,10 +176,10 @@ public class AppoinmentType {
 	
 	
 
-			//============================= Delete Appointment Type ==============================	
+	//============================= Delete Appointment Type ==============================	
 		
 			
-			public String deleteItem(String itemID)
+			public String deleteAppointmentTypes(String itemID)
 			{
 				String output = "";
 			 
@@ -240,10 +198,7 @@ public class AppoinmentType {
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 			 
 					// binding values
-					//preparedStmt.setInt(1, Integer.parseInt(itemID));
 					preparedStmt.setString(1, itemID);
-					//preparedStmt.setString(1, s_id);
-					// execute the statement
 					preparedStmt.execute();
 					con.close();
 			
