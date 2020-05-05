@@ -1,6 +1,5 @@
 # PAF_Appointment_Schedule_service
-
-# PAF-Patient-Service_Practical-Exam
+================================================
 
 * Name  : Prathapa D.M.J
 * IT No : IT17167710
@@ -47,21 +46,20 @@ Technology Stack
  Screenshots
 -------------
 
-* Appointment Schedule Management Home 
-
+* Appointment Schedule Management Home
+-----------------------------------------
 ![Screenshot (190)](https://user-images.githubusercontent.com/53893019/81089725-53701f00-8f1a-11ea-8e47-4d62aebf3241.png)
 
-
 * Appointment Type interface
-
+-----------------------------------------
 ![Screenshot (191)](https://user-images.githubusercontent.com/53893019/81090724-cc23ab00-8f1b-11ea-9d60-28b976b97a91.png)
 
 * Appointment Schedule interface
-
+-----------------------------------------
 ![Screenshot (192)](https://user-images.githubusercontent.com/53893019/81095561-d09f9200-8f22-11ea-9cf9-410e77bf1893.png)
 
 * Appointment Schedule Summary Interface
-
+------------------------------------------
 ![Screenshot (193)](https://user-images.githubusercontent.com/53893019/81095622-e745e900-8f22-11ea-8a63-c1ba9f14d0ce.png)
 
 
