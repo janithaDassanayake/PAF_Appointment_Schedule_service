@@ -154,17 +154,32 @@ function validateSceduleForm()
 		return " Please enter Doctor ID";
 	}
 	
+	// Check numeric value
+	var docid = $("#D_id").val().trim();
+	if (!$.isNumeric(docid)) {
+		return "Doctor ID Schould be Numeric";
+	}
+	
 	//Hospital ID
 	if ($("#H_id").val().trim() == "")
 	{
 		return " Please enter Hospitl ID";
 	}
-	
+	// Check numeric value
+	var hosId = $("#H_id").val().trim();
+	if (!$.isNumeric(hosId)) {
+		return "Hospital ID Schould be Numeric";
+	}
 	
 	//Appointment Type ID
 	if ($("#App_id").val().trim() == "")
 	{
 		return "Insert Appointment ID.";
+	}
+	// Check numeric value
+	var Appid = $("#D_id").val().trim();
+	if (!$.isNumeric(Appid)) {
+		return "Appointment ID Schould be Numeric";
 	}
 	
 	return true;
