@@ -22,10 +22,6 @@ Technology Stack
 * View: HTML, CSS, Bootstrap, Form and Grid UI design pattern
 * Client-components: jQuery, Ajax for DC
 
- Database Design
------------------
-![er](https://user-images.githubusercontent.com/53893019/81097336-5de3e600-8f25-11ea-8b1a-fdc055e4cec8.JPG)
-
 Validations
 -----------------
  
@@ -44,6 +40,10 @@ Validations
 * Hospital id  :- Hospital ID cannot be empty & ID should be numeric.
 * Appointment Type id  :- Appointment Type ID cannot be empty & ID should be numeric.
 
+
+Database Design
+-----------------
+![er](https://user-images.githubusercontent.com/53893019/81097336-5de3e600-8f25-11ea-8b1a-fdc055e4cec8.JPG)
 
 
  Screenshots
