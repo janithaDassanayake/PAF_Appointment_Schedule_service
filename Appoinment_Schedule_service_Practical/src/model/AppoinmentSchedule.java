@@ -153,7 +153,7 @@ public class AppoinmentSchedule {
 						output += "</tr></table>";
 
 					} catch (Exception e) {
-						output = "Error while reading the Doctors Details.";
+						output = "Error while reading the Schedule Details.";
 						System.err.println(e.getMessage());
 					}
 
@@ -194,8 +194,8 @@ public class AppoinmentSchedule {
 				preparedStmt.execute();
 				con.close();
 				
-				String newItems = ReadAllSchedule();
-				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+				String newSchedule = ReadAllSchedule();
+				output = "{\"status\":\"success\", \"data\": \"" + newSchedule + "\"}";
 
 			} catch (Exception e) {
 				output = "{\"status\":\"error\", \"data\": \"Error while inserting the Schedule.\"}";
@@ -240,13 +240,13 @@ public class AppoinmentSchedule {
 				preparedStmt.execute();
 				con.close();
 				
-				String newItems = ReadAllSchedule();
-				output = "{\"status\":\"success\", \"data\": \"" +newItems + "\"}";
+				String newSchedule = ReadAllSchedule();
+				output = "{\"status\":\"success\", \"data\": \"" +newSchedule + "\"}";
 				 
 			}
 			catch (Exception e)
 			{
-				output = "{\"status\":\"error\", \"data\": \"Error while updating the item.\"}";
+				output = "{\"status\":\"error\", \"data\": \"Error while updating the Schedule.\"}";
 				 
 				System.err.println(e.getMessage());
 			}
@@ -281,13 +281,13 @@ public class AppoinmentSchedule {
 				preparedStmt.execute();
 				con.close();
 		
-				String newItems = ReadAllSchedule();
-				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+				String newSchedule = ReadAllSchedule();
+				output = "{\"status\":\"success\", \"data\": \"" + newSchedule + "\"}";
 		 
 			}
 			catch (Exception e)
 			{
-				output = "{\"status\":\"error\", \"data\":\"Error while deleting the item.\"}";
+				output = "{\"status\":\"error\", \"data\":\"Error while deleting the Schedule.\"}";
 				System.err.println(e.getMessage());
 		 
 			}

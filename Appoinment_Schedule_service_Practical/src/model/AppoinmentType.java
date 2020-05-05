@@ -108,12 +108,12 @@ public class AppoinmentType {
 			preparedStmt.execute();
 			con.close();
 			 
-			String newItems = viewAppointmentTypes();
-			output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
+			String newType = viewAppointmentTypes();
+			output = "{\"status\":\"success\", \"data\": \"" + newType + "\"}";
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while inserting the Appoinment Type\"}";
 			 
 			System.err.println(e.getMessage());
 			 
@@ -157,13 +157,13 @@ public class AppoinmentType {
 			preparedStmt.execute();
 			con.close();
 			 
-			String newItems = viewAppointmentTypes();
-			output = "{\"status\":\"success\", \"data\": \"" +newItems + "\"}";
+			String newType = viewAppointmentTypes();
+			output = "{\"status\":\"success\", \"data\": \"" +newType + "\"}";
 			 
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while updating the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while updating the Appoinment Type.\"}";
 			 
 			System.err.println(e.getMessage());
 		}
@@ -203,14 +203,13 @@ public class AppoinmentType {
 					preparedStmt.execute();
 					con.close();
 			
-					String newItems = viewAppointmentTypes();
-					output = "{\"status\":\"success\", \"data\": \"" + 
-					newItems + "\"}";
+					String newType = viewAppointmentTypes();
+					output = "{\"status\":\"success\", \"data\": \"" + newType + "\"}";
 			 
 				}
 				catch (Exception e)
 				{
-					output = "{\"status\":\"error\", \"data\":\"Error while deleting the item.\"}";
+					output = "{\"status\":\"error\", \"data\":\"Error while deleting the Appoinment Type.\"}";
 					System.err.println(e.getMessage());
 			 
 				}
