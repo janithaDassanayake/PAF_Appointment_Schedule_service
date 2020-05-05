@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2020 at 11:24 AM
+-- Generation Time: May 05, 2020 at 12:30 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -45,8 +45,7 @@ CREATE TABLE `appointment_scheduling` (
 INSERT INTO `appointment_scheduling` (`Schedule_id`, `Date`, `Start_Time`, `End_Time`, `D_id`, `H_id`, `App_id`) VALUES
 (25, 'Monday', '23:59', '00:59', 2, 2, 1),
 (31, 'Wednesday', '23:59', '23:59', 1, 1, 1),
-(33, 'Sunday', '23:59', '23:59', 1, 1, 1),
-(34, 'Sunday', '23:59', '23:59', 1, 1, 1);
+(33, 'Tuesday', '23:59', '23:59', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -66,7 +65,8 @@ CREATE TABLE `appointment_type` (
 --
 
 INSERT INTO `appointment_type` (`appointment_Id`, `Appointment_Type`, `Appointment_Name`, `Appointment_Desc`) VALUES
-(1, 'ENT', 'Common Ear Nose Throat', ' specifically perform these types of procedures eg Sinus surgery tonsil removal breathing surgery');
+(1, 'ENT', 'Common Ear Nose Throat', ' specifically perform these types of procedures eg Sinus surgery tonsil removal breathing surgery'),
+(2, 'Rhinology', 'Ear Nose and Throat', 'Rhinology includes nasal dysfunction and sinus');
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,9 @@ CREATE TABLE `doctor` (
 INSERT INTO `doctor` (`Doctor_Id`, `DoctorName`, `NIC`, `Address`, `MobileNo`, `Email`, `Specialization`, `HospitalName`, `DepartmentName`) VALUES
 (1, 'Dr . janitha Dassanayake', '123445v', 'ragama', 717936280, 'j@yahoo.com', 'ENT	', 'ASIRI', 'OPD'),
 (2, 'Dr. Thilini Dureksha', '234566v', 'malabe', 7156813, 't@gmail.com', 'physiotherapy', 'Browns', 'Clinic'),
-(3, 'Dr. praba Jayalath', '123456v', 'gampaha', 71782345, 'p@gmail.com', 'Eye', 'ASIRI', 'OPD');
+(3, 'Dr. praba Jayalath', '123456v', 'gampaha', 71782345, 'p@gmail.com', 'Eye', 'ASIRI', 'OPD'),
+(4, 'Dr udara Vu', '1234567893v', 'katunayaka/Seeduwa', 717936284, 'udara@gmail.com', 'Neurologist', 'Asiri', 'Neuro'),
+(5, 'Dr Sadini', '1234564563v', 'Galle', 777936284, 'Sadini@gmail.com', 'Rheumatologist', 'Browns', 'Rheuma');
 
 -- --------------------------------------------------------
 
@@ -119,7 +121,8 @@ CREATE TABLE `hostpital` (
 INSERT INTO `hostpital` (`hospital_Id`, `Hospital_Name`, `Hospital_Address`, `Hospital_City`, `Hospital_Phone`, `Hospital_Email`, `Hospital_Description`, `Open_Hours`) VALUES
 (1, 'ASIRI ', 'Colombo,TownHall', 'colombo', '0112278963', 'Asiri@gmail.com', 'Asiri Hospital', 24),
 (2, 'Browns', 'Ragama,Mahabage', 'Ragama', '0112753214', 'Browns@gmail.com', 'Browns Hospital', NULL),
-(3, 'Hemas Hospital', 'Wattala,Negambo Road', 'Wattala', '0112345678', 'Hemas@gmail.com', 'Hemas Hospital', 24);
+(3, 'Hemas Hospital', 'Wattala,Negambo Road', 'Wattala', '0112345678', 'Hemas@gmail.com', 'Hemas Hospital', 24),
+(4, 'Nawaloka', 'Nawaloka Hospital Colombo', 'colombo', '0112583640', 'nawaloka@gmail.com', 'Nawaloka Hospital', 20);
 
 --
 -- Indexes for dumped tables
@@ -172,13 +175,13 @@ ALTER TABLE `appointment_type`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `Doctor_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Doctor_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hostpital`
 --
 ALTER TABLE `hostpital`
-  MODIFY `hospital_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `hospital_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
