@@ -223,7 +223,7 @@ public class AppoinmentType {
 
 			//====================================search type by ID ===================================
 	
-			
+			/*
 
 			//view list of appointment types	
 			public List<AppoinmentTypeBean> viewTypes() {
@@ -289,7 +289,7 @@ public class AppoinmentType {
 			
 			
 			
-			
+			*/
 			
 			
 			
