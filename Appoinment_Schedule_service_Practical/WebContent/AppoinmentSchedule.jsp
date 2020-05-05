@@ -76,7 +76,7 @@
 								class="form-control form-control-sm" min="1" max="5">
 							    <br>
 							 Hospital ID:<input id="H_id" name="H_id" type="number"
-								class="form-control form-control-sm" min="1" max="5">
+								class="form-control form-control-sm" min="1" max="4">
 								 <br>
 							Appointment Type ID:
 							<input id="App_id" name="App_id" type="number"

@@ -13,7 +13,7 @@ public class DBconnection {
 
 			Class.forName("com.mysql.jdbc.Driver");
 		
-			con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/it17167710-paf-db", "root", "");
+			con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/health-system", "root", "");
 			System.out.print("Successfully connected");
 
 		} catch (Exception e) {
