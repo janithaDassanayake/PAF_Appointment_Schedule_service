@@ -27,13 +27,13 @@ Technology Stack
 -----------------
  
  + Appointment Types 
-
+-----------------------
 * Appointment Type :- Appointment Type cannot be empty and can not be only numeric.
 * Appointment_Name :- Appointment Name cannot be empty and can not be only numeric.
 * Appointment Description :- Appointment Description cannot be empty and can not be only numeric.
 
  + Appointment Schedule 
-
+-------------------------
 * Date     :- Appointment Type cannot be empty.
 * Start Time  :- Appointment Type cannot be empty.
 * End Time  :-  Appointment Type cannot be empty.
