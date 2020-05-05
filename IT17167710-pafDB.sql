@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2020 at 01:05 PM
+-- Generation Time: May 05, 2020 at 11:24 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -44,8 +44,9 @@ CREATE TABLE `appointment_scheduling` (
 
 INSERT INTO `appointment_scheduling` (`Schedule_id`, `Date`, `Start_Time`, `End_Time`, `D_id`, `H_id`, `App_id`) VALUES
 (25, 'Monday', '23:59', '00:59', 2, 2, 1),
-(26, 'Friday', '23:59', '10:00', 1, 1, 1),
-(29, 'Monday', '01:00', '03:00', 3, 2, 42);
+(31, 'Wednesday', '23:59', '23:59', 1, 1, 1),
+(33, 'Sunday', '23:59', '23:59', 1, 1, 1),
+(34, 'Sunday', '23:59', '23:59', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -65,8 +66,7 @@ CREATE TABLE `appointment_type` (
 --
 
 INSERT INTO `appointment_type` (`appointment_Id`, `Appointment_Type`, `Appointment_Name`, `Appointment_Desc`) VALUES
-(1, 'ENT', 'Common Ear Nose Throat', ' specifically perform these types of procedures eg Sinus surgery tonsil removal breathing surgery'),
-(42, 'physiotherapy', 'Pediatric Physical Therapy', 'Different Types Of Physiotherapy Used In Rehabilitation');
+(1, 'ENT', 'Common Ear Nose Throat', ' specifically perform these types of procedures eg Sinus surgery tonsil removal breathing surgery');
 
 -- --------------------------------------------------------
 
@@ -160,13 +160,13 @@ ALTER TABLE `hostpital`
 -- AUTO_INCREMENT for table `appointment_scheduling`
 --
 ALTER TABLE `appointment_scheduling`
-  MODIFY `Schedule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `Schedule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `appointment_type`
 --
 ALTER TABLE `appointment_type`
-  MODIFY `appointment_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `appointment_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `doctor`
