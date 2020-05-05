@@ -22,8 +22,11 @@ Technology Stack
 * View: HTML, CSS, Bootstrap, Form and Grid UI design pattern
 * Client-components: jQuery, Ajax for DC
 
+ Database Design
+-----------------
+![er](https://user-images.githubusercontent.com/53893019/81097336-5de3e600-8f25-11ea-8b1a-fdc055e4cec8.JPG)
 
- Validations
+Validations
 -----------------
  
  + Appointment Types 
@@ -61,7 +64,6 @@ Technology Stack
 * Appointment Schedule Summary Interface
 ------------------------------------------
 ![Screenshot (193)](https://user-images.githubusercontent.com/53893019/81095622-e745e900-8f22-11ea-8a63-c1ba9f14d0ce.png)
-
 
 
 
