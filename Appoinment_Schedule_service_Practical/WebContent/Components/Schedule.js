@@ -154,7 +154,7 @@ function validateSceduleForm()
 		return " Please enter Doctor ID";
 	}
 	
-	// Check numeric value
+	// Doctor ID Schould be Numeric
 	var docid = $("#D_id").val().trim();
 	if (!$.isNumeric(docid)) {
 		return "Doctor ID Schould be Numeric";
@@ -165,7 +165,7 @@ function validateSceduleForm()
 	{
 		return " Please enter Hospitl ID";
 	}
-	// Check numeric value
+	// Hospital ID Schould be Numeric"
 	var hosId = $("#H_id").val().trim();
 	if (!$.isNumeric(hosId)) {
 		return "Hospital ID Schould be Numeric";
@@ -176,7 +176,7 @@ function validateSceduleForm()
 	{
 		return "Insert Appointment ID.";
 	}
-	// Check numeric value
+	// Appointment ID Schould be Numeric
 	var Appid = $("#D_id").val().trim();
 	if (!$.isNumeric(Appid)) {
 		return "Appointment ID Schould be Numeric";
