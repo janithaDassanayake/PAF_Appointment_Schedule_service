@@ -55,8 +55,8 @@
   
 
 				<div class="container">
-					<center>
-					<h2>Appointment Schedule List</h2></center> 
+					
+					<h2 align="center">Appointment Schedule List</h2>
 					<br>
 					<div id="divItemsGrid1" class="table table-striped table-dark">
 						<%

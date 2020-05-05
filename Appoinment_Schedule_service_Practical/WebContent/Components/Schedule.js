@@ -23,7 +23,7 @@ $(document).on("click", "#btnSave", function(event)
 	}
 
 	// If valid------------------------
-	var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidScheduleIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax(
 	{
@@ -67,14 +67,14 @@ function onScheduleSaveComplete(response, status)
 		$("#alertError").text("Unknown error while saving..");
 		$("#alertError").show();
 	}
-	$("#hidItemIDSave").val("");
+	$("#hidScheduleIDSave").val("");
 	$("#formSchedule")[0].reset();
 }
 
 //UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 {
-	$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val());
+	$("#hidScheduleIDSave").val($(this).closest("tr").find('#hidScheduleIDUpdate').val());
 	$("#Date").val($(this).closest("tr").find('td:eq(0)').text());
 	$("#Start_Time").val($(this).closest("tr").find('td:eq(1)').text());
 	$("#End_Time").val($(this).closest("tr").find('td:eq(2)').text());

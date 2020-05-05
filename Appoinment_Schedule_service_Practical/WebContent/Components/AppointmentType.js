@@ -23,7 +23,7 @@ $(document).on("click", "#btnSave", function(event)
 	}
 
 	// If valid------------------------
-	var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidtypeIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax(
 	{
@@ -64,14 +64,14 @@ function onApptypeSaveComplete(response, status)
 		$("#alertError").text("Unknown error while saving..");
 		$("#alertError").show();
 	}
-	$("#hidItemIDSave").val("");
+	$("#hidtypeIDSave").val("");
 	$("#formtype")[0].reset();
 }
 
 //UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 {
-	$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val());
+	$("#hidtypeIDSave").val($(this).closest("tr").find('#hidtypeIDUpdate').val());
 	$("#Appointment_Type").val($(this).closest("tr").find('td:eq(0)').text());
 	$("#Appointment_Name").val($(this).closest("tr").find('td:eq(1)').text());
 	$("#Appointment_Desc").val($(this).closest("tr").find('td:eq(2)').text());

@@ -61,7 +61,7 @@ public class SceduleAPI extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		Map paras = getParasMap1(request);
-		 String output = appoinmentSchedule.updateAppointmentSchedule(paras.get("hidItemIDSave").toString(),
+		 String output = appoinmentSchedule.updateAppointmentSchedule(paras.get("hidScheduleIDSave").toString(),
 		 paras.get("Date").toString(),
 		 paras.get("Start_Time").toString().replace("%3A",":"),
 		 paras.get("End_Time").toString().replace("%3A",":"),

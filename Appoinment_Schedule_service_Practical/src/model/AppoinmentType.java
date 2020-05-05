@@ -53,7 +53,7 @@ public class AppoinmentType {
 				
 
 				// Add into the html table
-				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" + TypeRead.getAppointment_Id() + "'>" + TypeRead.getAppointment_Type() + "</td>";
+				output += "<tr><td><input id='hidtypeIDUpdate' name='hidtypeIDUpdate' type='hidden' value='" + TypeRead.getAppointment_Id() + "'>" + TypeRead.getAppointment_Type() + "</td>";
 				output += "<td>" + TypeRead.getAppointment_Name()+ "</td>";
 				output += "<td>" + TypeRead.getAppointment_Desc()+ "</td>";
 				output += "<td>" + TypeRead.getAppointment_Id()+ "</td>";

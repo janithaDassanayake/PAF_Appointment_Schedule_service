@@ -64,7 +64,7 @@ public class TypeAPI extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		 String output = appoinmentType.updateAppointmentType(paras.get("hidItemIDSave").toString(),
+		 String output = appoinmentType.updateAppointmentType(paras.get("hidtypeIDSave").toString(),
 		 paras.get("Appointment_Type").toString().replace('+',' '),
 		 paras.get("Appointment_Name").toString().replace('+',' ') ,
 		 paras.get("Appointment_Desc").toString().replace('+',' ') );

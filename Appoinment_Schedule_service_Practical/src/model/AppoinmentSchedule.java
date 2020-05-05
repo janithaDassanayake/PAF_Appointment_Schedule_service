@@ -49,7 +49,7 @@ public class AppoinmentSchedule {
 			
 
 				// Add into the html table
-				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" +schedule_id+ "'>" +date+ "</td>";
+				output += "<tr><td><input id='hidScheduleIDUpdate' name='hidScheduleIDUpdate' type='hidden' value='" +schedule_id+ "'>" +date+ "</td>";
 				output += "<td>" + start_time + "</td>";
 				output += "<td>" + end_time + "</td>";
 				output += "<td>" + d_id + "</td>";
