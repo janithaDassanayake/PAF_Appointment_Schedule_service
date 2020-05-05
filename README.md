@@ -24,20 +24,20 @@ Technology Stack
 * Client-components: jQuery, Ajax for DC
 
 
-  Validations
+ Validations
 -----------------
  
- 
-1) Appointment Types 
+ *Appointment Types 
  -----------------------
 * Appointment Type :- Appointment Type cannot be empty and can not be only numeric.
 * Appointment_Name :- Appointment Name cannot be empty and can not be only numeric.
 * Appointment Description :- Appointment Description cannot be empty and can not be only numeric.
 
-2) Appointment Schedule 
+ *Appointment Schedule 
 ------------------------
-
-* Date     :-
-* Start Time  :- 
-* End Time  :- 
-* Doctor id  :- 
+* Date     :- Appointment Type cannot be empty.
+* Start Time  :- Appointment Type cannot be empty.
+* End Time  :-  Appointment Type cannot be empty.
+* Doctor id  :- Doctor ID cannot be empty & ID should be numeric.
+* Hospital id  :- Hospital ID cannot be empty & ID should be numeric.
+* Appointment Type id  :- Appointment Type ID cannot be empty & ID should be numeric.
