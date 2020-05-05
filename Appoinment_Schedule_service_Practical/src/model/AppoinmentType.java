@@ -60,7 +60,7 @@ public class AppoinmentType {
 			
 			
 				output += "<td><input name='btnUpdate' type='button'value='Update'class='btnUpdate btn btn-warning'></td> "
-						+ "<td><input name='btnRemove' type='button' value='Remove'class='btnRemove btn btn-danger' data-itemid='" + TypeRead.getAppointment_Id() + "'>" + "</td></tr>";
+						+ "<td><input name='btnRemove' type='button' value='Remove'class='btnRemove btn btn-danger' data-typeid='" + TypeRead.getAppointment_Id() + "'>" + "</td></tr>";
 			
 			}
 			con.close();
@@ -180,7 +180,7 @@ public class AppoinmentType {
 	//============================= Delete Appointment Type ==============================	
 		
 			
-			public String deleteAppointmentTypes(String itemID)
+			public String deleteAppointmentTypes(String typeID)
 			{
 				String output = "";
 			 
@@ -199,7 +199,7 @@ public class AppoinmentType {
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 			 
 					// binding values
-					preparedStmt.setString(1, itemID);
+					preparedStmt.setString(1, typeID);
 					preparedStmt.execute();
 					con.close();
 			

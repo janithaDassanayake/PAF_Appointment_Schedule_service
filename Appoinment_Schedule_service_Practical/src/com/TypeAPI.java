@@ -71,15 +71,6 @@ public class TypeAPI extends HttpServlet {
 		response.getWriter().write(output); 
     
 		
-		/* 	String output = itemObj.insertItem(request.getParameter("itemCode"),
-				request.getParameter("itemName"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemDesc"));
-				response.getWriter().write(output); 
-	}*/
-		
-		
-		
 	}
 
 	/**

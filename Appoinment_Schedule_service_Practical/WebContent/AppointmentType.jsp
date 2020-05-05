@@ -58,7 +58,7 @@
 
 				<h3 id="heading">Add Appointment Type</h3>
 				<br>
-					<form id="formItem" name="formItem">
+					<form id="formtype" name="formtype">
  					
  					Appointment Type:
  					<input id="Appointment_Type" name="Appointment_Type" type="text" class="form-control form-control-sm" > <br> 
@@ -87,7 +87,7 @@
 			<div class="col-md-8">
 					<h4 align="center">Appointment Type Table</h4>
 						<br>
-							<div id="divItemsGrid" class="table table-striped">
+							<div id="divtypeGrid" class="table table-striped">
 							 <%
 							 AppoinmentType AppoinmtmentObj = new AppoinmentType();
 							 out.print(AppoinmtmentObj.viewAppointmentTypes());

@@ -14,7 +14,7 @@ $(document).on("click", "#btnSave", function(event)
 	$("#alertError").hide();
 
 	// Form validation-------------------
-	var status = validateItemForm();
+	var status = validateTypeForm();
 	if (status != true)
 	{
 		$("#alertError").text(status);
@@ -29,17 +29,17 @@ $(document).on("click", "#btnSave", function(event)
 	{
 		url : "TypeAPI",
 		type : type,
-		data : $("#formItem").serialize(),
+		data : $("#formtype").serialize(),
 		dataType : "text",
 		complete : function(response, status)
 		{
-			 onItemSaveComplete(response.responseText, status);
+			 onApptypeSaveComplete(response.responseText, status);
 		}
 	});
 });
 
 
-function onItemSaveComplete(response, status)
+function onApptypeSaveComplete(response, status)
 {
 	if (status == "success")
 	{
@@ -49,7 +49,7 @@ function onItemSaveComplete(response, status)
 		{
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divtypeGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error")
 		{
 			$("#alertError").text(resultSet.data);
@@ -65,7 +65,7 @@ function onItemSaveComplete(response, status)
 		$("#alertError").show();
 	}
 	$("#hidItemIDSave").val("");
-	$("#formItem")[0].reset();
+	$("#formtype")[0].reset();
 }
 
 //UPDATE==========================================
@@ -85,16 +85,16 @@ $(document).on("click", ".btnRemove", function(event)
 		 {
 		 url : "TypeAPI",
 		 type : "DELETE",
-		 data : "appointment_Id =" + $(this).data("itemid"),
+		 data : "appointment_Id =" + $(this).data("typeid"),
 		 dataType : "text",
 		 complete : function(response, status)
 		 {
-		 onItemDeleteComplete(response.responseText, status);
+		 onAppTypeDeleteComplete(response.responseText, status);
 		 }
 		 });
 		});
 
-function onItemDeleteComplete(response, status)
+function onAppTypeDeleteComplete(response, status)
 {
 	if (status == "success")
 	{
@@ -103,7 +103,7 @@ function onItemDeleteComplete(response, status)
 		{
 			$("#alertSuccess").text("Successfully deleted.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divtypeGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error")
 		{
 			$("#alertError").text(resultSet.data);
@@ -121,7 +121,7 @@ function onItemDeleteComplete(response, status)
 }
 
 //CLIENT-MODEL================================================================
-function validateItemForm()
+function validateTypeForm()
 {
 	//APPOINTMENT TYPE
 	if ($("#Appointment_Type").val().trim() == "")

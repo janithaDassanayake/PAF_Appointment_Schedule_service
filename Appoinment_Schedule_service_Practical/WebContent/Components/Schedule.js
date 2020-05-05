@@ -14,7 +14,7 @@ $(document).on("click", "#btnSave", function(event)
 	$("#alertError").hide();
 
 	// Form validation-------------------
-	var status = validateItemForm();
+	var status = validateSceduleForm();
 	if (status != true)
 	{
 		$("#alertError").text(status);
@@ -33,14 +33,14 @@ $(document).on("click", "#btnSave", function(event)
 		dataType : "text",
 		complete : function(response, status)
 		{
-			 onItemSaveComplete(response.responseText, status);
+			 onScheduleSaveComplete(response.responseText, status);
 			 //console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
 		}
 	});
 });
 
 
-function onItemSaveComplete(response, status)
+function onScheduleSaveComplete(response, status)
 {
 	// console.log("Ffffffffffffffffffffffffffffffffffffff");
 	
@@ -95,13 +95,13 @@ $(document).on("click", ".btnRemove", function(event)
 		 dataType : "text",
 		 complete : function(response, status)
 		 {
-		 onItemDeleteComplete1(response.responseText, status);
+		 onScheduleDeleteComplete1(response.responseText, status);
 		 }
 		 
 		 });
 		});
 
-function onItemDeleteComplete1(response, status)
+function onScheduleDeleteComplete1(response, status)
 {
 	if (status == "success")
 	{
@@ -128,7 +128,7 @@ function onItemDeleteComplete1(response, status)
 }
 
 //CLIENT-MODEL================================================================
-function validateItemForm()
+function validateSceduleForm()
 {
 	//day of the week
 	if ($("#Date").val().trim() == "")
