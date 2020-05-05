@@ -37,7 +37,7 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown" style="margin-left: 700px">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Schedule Dropdown 
+        Schedule Drop down 
       </a>
       	<div class="dropdown-menu">
         <a class="dropdown-item" href="AppointmentType.jsp">Define Appointments</a>
@@ -85,9 +85,8 @@
 				</div>
 
 			<div class="col-md-8">
-				<div class="container">
-					<center><h4>Appointment Type Table</h4></center>
-					<br>
+					<h4 align="center">Appointment Type Table</h4>
+						<br>
 							<div id="divItemsGrid" class="table table-striped">
 							 <%
 							 AppoinmentType AppoinmtmentObj = new AppoinmentType();
@@ -101,6 +100,6 @@
  			
 						
 				</div>
- 			</div>
+
 	</body>
 </html>

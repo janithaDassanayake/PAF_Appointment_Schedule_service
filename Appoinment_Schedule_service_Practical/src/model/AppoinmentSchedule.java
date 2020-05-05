@@ -198,7 +198,7 @@ public class AppoinmentSchedule {
 				output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
 
 			} catch (Exception e) {
-				output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
+				output = "{\"status\":\"error\", \"data\": \"Error while inserting the Schedule.\"}";
 				System.err.println(e.getMessage());
 			}
 

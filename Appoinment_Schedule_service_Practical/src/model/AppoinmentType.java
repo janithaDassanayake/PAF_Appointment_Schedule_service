@@ -37,7 +37,7 @@ public class AppoinmentType {
 			// Prepare the html table to be displayed
 			
 			output = "<table border='1'><tr><th>Appointment</th><th>Type</th>"
-					 + "<th>Description</th><th>Update</th><th>Remove</th></tr>"; 
+					 + "<th>Description</th><th>App ID</th><th>Update</th><th>Remove</th></tr>"; 
 
 			String query = "select * from appointment_type";
 			Statement stmt = con.createStatement();
@@ -56,6 +56,7 @@ public class AppoinmentType {
 				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" + TypeRead.getAppointment_Id() + "'>" + TypeRead.getAppointment_Type() + "</td>";
 				output += "<td>" + TypeRead.getAppointment_Name()+ "</td>";
 				output += "<td>" + TypeRead.getAppointment_Desc()+ "</td>";
+				output += "<td>" + TypeRead.getAppointment_Id()+ "</td>";
 			
 			
 				output += "<td><input name='btnUpdate' type='button'value='Update'class='btnUpdate btn btn-warning'></td> "
